@@ -1,6 +1,6 @@
 from astropy.table import Table, Column, vstack
 import numpy as np
-tab = Table.read('tableDiff.csv')
+tab = Table.read('tableDiff.csv', fill_values=[('nan','')])
 
 btab = vstack([tab,tab])
 for i in range(5):
